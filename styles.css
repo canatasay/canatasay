@@ -1,6 +1,70 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-header { background: #333; color: #fff; padding: 10px 0; text-align: center; }
-nav { margin: 10px 0; }
-nav a { margin: 0 10px; color: #fff; text-decoration: none; }
-main { padding: 20px; }
-footer { background: #333; color: #fff; text-align: center; padding: 10px 0; }
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Arka plan rengi */
+    color: #666; /* Yazı rengi */
+}
+
+header {
+    background-color: #333; /* Başlık arka plan rengi */
+    color: #fff; /* Başlık yazı rengi */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff; /* Navigasyon bağlantı rengi */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Üzerine gelince altı çizili */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortalamak için */
+    background-color: #fff; /* Ana içerik arka plan rengi */
+    border-radius: 8px; /* Köşe yuvarlama */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+}
+
+footer {
+    background-color: #333; /* Footer arka plan rengi */
+    color: #fff; /* Footer yazı rengi */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 24px; /* İkon boyutunu ayarlayabilirsiniz */
+    height: 24px;
+    vertical-align: middle;
+}
