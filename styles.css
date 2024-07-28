@@ -1,6 +1,6 @@
 /* Genel Ayarlar */
 body {
-    font-family: 'Roboto', sans-serif; /* Daha modern bir font */
+    font-family: 'Gloria Hallelujah', cursive; /* Tüm metinler için Gloria Hallelujah fontu */
     margin: 0;
     padding: 0;
     background-color: #f0f2f5; /* Hafif gri bir arka plan rengi */
@@ -18,7 +18,6 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em; /* Daha büyük başlık */
-    font-family: "Gloria Hallelujah", cursive; /* Başlık için Gloria Hallelujah fontu */
 }
 
 /* Navigasyon */
@@ -74,20 +73,4 @@ footer p {
     width: 30px; /* Daha büyük ikonlar */
     height: 30px;
     vertical-align: middle;
-}
-
-/* Gloria Hallelujah fontu ile ilgili stil ayarları */
-.gloria-hallelujah-regular {
-    font-family: "Gloria Hallelujah", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Ekstil stil ayarları */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif; /* Başlıklar için Roboto fontu */
-}
-
-p {
-    font-family: 'Roboto', sans-serif; /* Paragraflar için Roboto fontu */
 }
