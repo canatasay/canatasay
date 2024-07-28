@@ -82,3 +82,12 @@ footer p {
     font-weight: 400;
     font-style: normal;
 }
+
+/* Ekstil stil ayarları */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Başlıklar için Roboto fontu */
+}
+
+p {
+    font-family: 'Roboto', sans-serif; /* Paragraflar için Roboto fontu */
+}
