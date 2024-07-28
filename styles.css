@@ -1,51 +1,56 @@
 /* Genel Ayarlar */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Daha modern bir font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Arka plan rengi */
-    color: #666; /* Yazı rengi */
+    background-color: #f0f2f5; /* Hafif gri bir arka plan rengi */
+    color: #333; /* Daha koyu bir yazı rengi */
 }
 
+/* Header */
 header {
-    background-color: #333; /* Başlık arka plan rengi */
-    color: #fff; /* Başlık yazı rengi */
+    background-color: #007bff; /* Canlı mavi bir arka plan rengi */
+    color: #fff; /* Beyaz yazı rengi */
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em; /* Daha büyük başlık */
 }
 
+/* Navigasyon */
 nav {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 nav a {
     margin: 0 15px;
-    color: #fff; /* Navigasyon bağlantı rengi */
+    color: #fff; /* Beyaz renkli linkler */
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline; /* Üzerine gelince altı çizili */
+    color: #e0e0e0; /* Üzerine gelince açık gri */
 }
 
+/* Ana İçerik */
 main {
     padding: 20px;
     max-width: 1200px; /* Maksimum genişlik */
-    margin: 0 auto; /* Ortalamak için */
-    background-color: #fff; /* Ana içerik arka plan rengi */
+    margin: 20px auto; /* Ortalamak için */
+    background-color: #fff; /* Beyaz ana içerik arka planı */
     border-radius: 8px; /* Köşe yuvarlama */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Daha belirgin gölgelendirme */
 }
 
+/* Footer */
 footer {
-    background-color: #333; /* Footer arka plan rengi */
-    color: #fff; /* Footer yazı rengi */
+    background-color: #333; /* Koyu gri footer arka planı */
+    color: #fff; /* Beyaz yazı rengi */
     text-align: center;
     padding: 20px 0;
 }
@@ -54,6 +59,7 @@ footer p {
     margin: 0;
 }
 
+/* Sosyal Medya İkonları */
 .social-media {
     margin-top: 10px;
 }
@@ -64,7 +70,7 @@ footer p {
 }
 
 .social-icon img {
-    width: 24px; /* İkon boyutunu ayarlayabilirsiniz */
-    height: 24px;
+    width: 30px; /* Daha büyük ikonlar */
+    height: 30px;
     vertical-align: middle;
 }
