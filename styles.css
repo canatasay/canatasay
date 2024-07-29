@@ -80,3 +80,19 @@ footer p {
     width: 100%; /* Görsel genişliği */
     height: auto; /* Orantılı yükseklik */
 }
+
+/* Sosyal Medya İkonları */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 24px; /* İkon boyutunu ayarlayabilirsiniz */
+    height: 24px;
+    vertical-align: middle;
+}
