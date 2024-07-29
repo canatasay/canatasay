@@ -1,23 +1,23 @@
 /* Genel Ayarlar */
 body {
-    font-family: 'Gloria Hallelujah', sans-serif; /* Gloria Hallelujah fontu */
+    font-family: 'Gloria Hallelujah', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Hafif gri bir arka plan rengi */
-    color: #333; /* Daha koyu bir yazı rengi */
+    background-color: #f0f2f5;
+    color: #333;
 }
 
 /* Header */
 header {
-    background-color: #007bff; /* Canlı mavi bir arka plan rengi */
-    color: #fff; /* Beyaz yazı rengi */
+    background-color: #007bff;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Daha büyük başlık */
+    font-size: 2.5em;
 }
 
 /* Navigasyon */
@@ -27,24 +27,24 @@ nav {
 
 nav a {
     margin: 0 15px;
-    color: #fff; /* Beyaz renkli linkler */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Üzerine gelince altı çizili */
-    color: #e0e0e0; /* Üzerine gelince açık gri */
+    text-decoration: underline;
+    color: #e0e0e0;
 }
 
 /* Ana İçerik */
 main {
     padding: 20px;
-    max-width: 1200px; /* Maksimum genişlik */
-    margin: 20px auto; /* Ortalamak için */
-    background-color: #fff; /* Beyaz ana içerik arka planı */
-    border-radius: 8px; /* Köşe yuvarlama */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Daha belirgin gölgelendirme */
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Portfolio */
@@ -56,52 +56,82 @@ main {
 }
 
 .portfolio-item {
-    width: calc(33.333% - 40px); /* Üç sütun düzeni için */
+    width: 100%;
+    max-width: 800px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item img {
+.portfolio-image {
     width: 100%;
     height: auto;
-    display: block;
-    max-width: 500px; /* Maksimum genişlik ayarı */
-    max-height: 500px; /* Maksimum yükseklik ayarı */
-    margin: auto; /* Ortalamak için */
-}
-
-.portfolio-item p {
-    padding: 10px;
-    margin: 0;
+    cursor: pointer;
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Koyu gri footer arka planı */
-    color: #fff; /* Beyaz yazı rengi */
     text-align: center;
     padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
-    margin: 0;
+    margin: 5px 0;
 }
 
-/* Sosyal Medya İkonları */
 .social-media {
     margin-top: 10px;
 }
 
 .social-icon {
-    display: inline-block;
     margin: 0 10px;
 }
 
 .social-icon img {
-    width: 30px; /* Daha büyük ikonlar */
-    height: 30px;
-    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+}
+
+/* Modal için CSS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
