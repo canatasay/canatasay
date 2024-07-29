@@ -1,108 +1,76 @@
-/* Genel Ayarlar */
 body {
-    font-family: 'Gloria Hallelujah', sans-serif;
+    font-family: 'Gloria Hallelujah', cursive;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header */
 header {
     background-color: #007bff;
-    color: #fff;
-    padding: 20px 0;
+    color: white;
+    padding: 1em;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-/* Navigasyon */
-nav {
-    margin: 15px 0;
-}
-
 nav a {
-    margin: 0 15px;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 15px;
 }
 
 nav a:hover {
     text-decoration: underline;
-    color: #e0e0e0;
 }
 
-/* Ana İçerik */
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 2em;
 }
 
-/* Portfolio */
 .portfolio {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .portfolio-item {
-    width: 100%;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 2em 0;
 }
 
 .portfolio-image {
-    width: 100%;
+    width: 80%;
     height: auto;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* Footer */
+.portfolio-image:hover {
+    transform: scale(1.05);
+}
+
 footer {
-    text-align: center;
-    padding: 20px 0;
     background-color: #333;
-    color: #fff;
+    color: white;
+    padding: 1em;
+    text-align: center;
     position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
 }
 
 .social-media {
     margin-top: 10px;
 }
 
-.social-icon {
-    margin: 0 10px;
-}
-
 .social-icon img {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
 }
 
-/* Modal için CSS */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -123,7 +91,7 @@ footer p {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #fff;
+    color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -134,4 +102,10 @@ footer p {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
