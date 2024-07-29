@@ -1,23 +1,23 @@
 /* Genel Ayarlar */
 body {
-    font-family: 'Gloria Hallelujah', cursive; /* Tüm yazı tipleri için */
+    font-family: 'Gloria Hallelujah', cursive; /* Fontu buraya ekleyin */
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #f0f2f5; /* Hafif gri bir arka plan rengi */
+    color: #333; /* Daha koyu bir yazı rengi */
 }
 
 /* Header */
 header {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007bff; /* Canlı mavi bir arka plan rengi */
+    color: #fff; /* Beyaz yazı rengi */
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5em; /* Daha büyük başlık */
 }
 
 /* Navigasyon */
@@ -27,62 +27,30 @@ nav {
 
 nav a {
     margin: 0 15px;
-    color: #fff;
+    color: #fff; /* Beyaz renkli linkler */
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #e0e0e0;
+    text-decoration: underline; /* Üzerine gelince altı çizili */
+    color: #e0e0e0; /* Üzerine gelince açık gri */
 }
 
 /* Ana İçerik */
 main {
     padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Galeri */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.gallery-item {
-    flex: 1 1 calc(33.333% - 40px); /* Ekran genişliğine göre ayarlama */
-    box-sizing: border-box;
-    margin: 10px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05); /* Hover efekti */
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 20px auto; /* Ortalamak için */
+    background-color: #fff; /* Beyaz ana içerik arka planı */
+    border-radius: 8px; /* Köşe yuvarlama */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Daha belirgin gölgelendirme */
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Koyu gri footer arka planı */
+    color: #fff; /* Beyaz yazı rengi */
     text-align: center;
     padding: 20px 0;
 }
@@ -91,18 +59,33 @@ footer p {
     margin: 0;
 }
 
-/* Sosyal Medya İkonları */
-.social-media {
-    margin-top: 10px;
+/* Portfolyo */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
-.social-icon {
-    display: inline-block;
-    margin: 0 10px;
+.portfolio-item {
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    position: relative;
 }
 
-.social-icon img {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
