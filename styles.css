@@ -1,23 +1,23 @@
 /* Genel Ayarlar */
 body {
-    font-family: 'Gloria Hallelujah', cursive; /* Fontu burada belirliyoruz */
+    font-family: 'Gloria Hallelujah', cursive;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Hafif gri bir arka plan rengi */
-    color: #333; /* Daha koyu bir yazı rengi */
+    background-color: #f0f2f5;
+    color: #333;
 }
 
 /* Header */
 header {
-    background-color: #007bff; /* Canlı mavi bir arka plan rengi */
-    color: #fff; /* Beyaz yazı rengi */
+    background-color: #007bff;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Daha büyük başlık */
+    font-size: 2.5em;
 }
 
 /* Navigasyon */
@@ -27,58 +27,60 @@ nav {
 
 nav a {
     margin: 0 15px;
-    color: #fff; /* Beyaz renkli linkler */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Üzerine gelince altı çizili */
-    color: #e0e0e0; /* Üzerine gelince açık gri */
+    text-decoration: underline;
+    color: #e0e0e0;
 }
 
 /* Ana İçerik */
 main {
     padding: 20px;
-    max-width: 1200px; /* Maksimum genişlik */
-    margin: 20px auto; /* Ortalamak için */
-    background-color: #fff; /* Beyaz ana içerik arka planı */
-    border-radius: 8px; /* Köşe yuvarlama */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Daha belirgin gölgelendirme */
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item p {
+    padding: 10px;
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Koyu gri footer arka planı */
-    color: #fff; /* Beyaz yazı rengi */
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
 footer p {
     margin: 0;
-}
-
-/* Portfolyo Sayfası Stilleri */
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Görseller arasındaki boşluk */
-    justify-content: center; /* Merkezi hizalama */
-}
-
-.portfolio-item {
-    background-color: #fff; /* Arka plan rengi */
-    border-radius: 8px; /* Köşe yuvarlama */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
-    overflow: hidden; /* İçeriğin dışarı taşmasını engelleme */
-    width: 300px; /* Görsel genişliği */
-    text-align: center; /* Metin hizalaması */
-}
-
-.portfolio-image {
-    width: 100%; /* Görsel genişliği */
-    height: auto; /* Orantılı yükseklik */
 }
 
 /* Sosyal Medya İkonları */
@@ -92,7 +94,7 @@ footer p {
 }
 
 .social-icon img {
-    width: 24px; /* İkon boyutunu ayarlayabilirsiniz */
+    width: 24px;
     height: 24px;
     vertical-align: middle;
 }
