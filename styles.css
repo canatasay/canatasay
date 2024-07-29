@@ -47,28 +47,32 @@ main {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Portfolio */
 .portfolio {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .portfolio-item {
-    width: calc(33.333% - 20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    width: calc(33.333% - 40px); /* Üç sütun düzeni için */
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
 }
 
-.portfolio-image {
+.portfolio-item img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .portfolio-item p {
     padding: 10px;
+    margin: 0;
 }
 
 /* Footer */
@@ -94,7 +98,7 @@ footer p {
 }
 
 .social-icon img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
 }
