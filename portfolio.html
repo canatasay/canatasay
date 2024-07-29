@@ -5,38 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolyo - Can ATASAY</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .portfolio-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
-        }
-        .portfolio-item {
-            flex: 1 1 calc(33.333% - 40px);
-            box-sizing: border-box;
-            position: relative;
-        }
-        .portfolio-item img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .portfolio-item p {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Portfolyo - Can ATASAY</h1>
+        <h1>Portfolyo</h1>
         <nav>
             <a href="index.html">Ana Sayfa</a>
             <a href="contact.html">İletişim</a>
@@ -44,14 +16,14 @@
         </nav>
     </header>
     <main>
-        <h2>Portfolyo</h2>
-        <div class="portfolio-container">
+        <h2>Projelerim</h2>
+        <section class="portfolio">
             <div class="portfolio-item">
-                <img src="images/kapak.jpg" alt="Kapak">
+                <img src="images/kapak.jpg" alt="Kapak" class="portfolio-image">
                 <p>Kapak Projesi Açıklaması</p>
             </div>
-            <!-- Daha fazla portfolyo öğesi buraya eklenebilir -->
-        </div>
+            <!-- Diğer projeleri buraya ekleyebilirsiniz -->
+        </section>
     </main>
     <footer>
         <p>© 2024 Can ATASAY</p>
