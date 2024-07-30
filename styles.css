@@ -29,8 +29,8 @@ nav ul li a {
     padding: 10px 20px;
 }
 
-nav ul li:hover .dropdown-content,
-nav ul li a:hover + .dropdown-content {
+nav ul li a:hover,
+nav ul li:hover .dropdown-content {
     display: block;
 }
 
@@ -139,4 +139,12 @@ footer {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
 }
