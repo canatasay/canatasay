@@ -1,9 +1,9 @@
+/* Genel font ayarları */
 body {
     font-family: 'Gloria Hallelujah', cursive;
-    margin: 0;
-    padding: 0;
 }
 
+/* Header stil ayarları */
 header {
     background-color: #3498db;
     color: white;
@@ -55,17 +55,31 @@ nav ul li:hover .dropdown-content {
     background-color: #ddd;
 }
 
-.language-selector {
-    position: absolute;
-    right: 20px;
-    top: 10px;
+/* Portfolyo başlığı altındaki alt başlıkların görünümünü ayarlama */
+nav ul li .dropdown-content {
+    display: none;
 }
 
+nav ul li:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Instagram logosunun boyutunu ayarlama */
+.social-media img {
+    width: 24px; /* İdeal boyut */
+    height: auto;
+}
+
+/* Genel içerik ayarları */
 main {
     padding: 20px;
     text-align: center;
 }
 
+/* Portfolyo stili */
 .portfolio {
     display: flex;
     justify-content: center;
@@ -90,6 +104,7 @@ main {
     transform: scale(1.05);
 }
 
+/* Lightbox stili */
 .lightbox {
     display: none;
     position: fixed;
