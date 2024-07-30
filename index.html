@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa - Can ATASAY</title>
+    <title>Ana Sayfa</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Can ATASAY</h1>
+        <h1>Portfolyo</h1>
         <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="portfolio.html">Portfolyo</a>
-            <a href="contact.html">İletişim</a>
-            <a href="copyright.html">Telif Hakkı</a>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li class="dropdown">
+                    <a href="portfolio.html">Portfolyo</a>
+                    <div class="dropdown-content">
+                        <a href="#koleksiyon1">Koleksiyon 1</a>
+                        <a href="#koleksiyon2">Koleksiyon 2</a>
+                        <a href="#koleksiyon3">Koleksiyon 3</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="copyright.html">Telif Hakkı</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
         </nav>
     </header>
-    <main>
-        <h2>Hoşgeldiniz!</h2>
-        <p>Bu benim portfolyo ve blog sitem. Burada projelerimi ve moda ile ilgili yazılarımı bulabilirsiniz.</p>
-    </main>
-    <footer>
+
+    <div class="container">
+        <h2>Ana Sayfa İçeriği</h2>
+        <p>Bu ana sayfanızın içeriğidir.</p>
+    </div>
+
+    <div class="footer">
         <p>© 2024 Can ATASAY</p>
-        <div class="social-media">
-            <a href="https://www.instagram.com/noirxpair/" target="_blank" class="social-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        <div class="social-icon">
+            <a href="https://www.instagram.com/yourprofile/">
+                <img src="path/to/instagram-icon.png" alt="Instagram">
             </a>
         </div>
-        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-            <a property="dct:title" rel="cc:attributionURL" href="https://canatasay.github.io/canatasay/">Can ATASAY Moda Blogu</a> 
-            <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.instagram.com/noirxpair/">Can ATASAY</a> tarafından hazırlanmıştır ve 
-            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-                CC BY-NC-ND 4.0
-                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
-                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
-                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
-            </a>
-        </p>
-    </footer>
+    </div>
 </body>
 </html>
