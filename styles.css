@@ -29,7 +29,6 @@ nav ul li a {
     padding: 10px 20px;
 }
 
-nav ul li a:hover,
 nav ul li:hover .dropdown-content {
     display: block;
 }
@@ -40,10 +39,6 @@ nav ul li:hover .dropdown-content {
     background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-}
-
-.dropdown-content.show {
-    display: block;
 }
 
 .dropdown-content a {
@@ -91,7 +86,7 @@ footer {
 }
 
 .portfolio-image {
-    max-width: 90%; /* Görseli %90 oranında küçültecek */
+    max-width: 90%;
     height: auto;
     cursor: pointer;
     border: 2px solid #ddd;
@@ -141,10 +136,15 @@ footer {
     cursor: pointer;
 }
 
-.dropdown-content {
-    display: none;
-}
-
-nav ul li:hover .dropdown-content {
-    display: block;
+@media (max-width: 768px) {
+    .dropdown-content a {
+        display: block;
+    }
+    nav ul {
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
 }
