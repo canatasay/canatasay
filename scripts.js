@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.portfolio-link').forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            lightboxImage.src = this.href;
+            lightboxImage.src = this.src;
             lightbox.style.display = 'block';
         });
     });
