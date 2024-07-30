@@ -1,5 +1,5 @@
 body {
-    font-family: 'Gloria Hallelujah', cursive; /* Fontu tüm sayfalarda geçerli kıldık */
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 header {
@@ -53,20 +53,25 @@ nav ul li:hover .dropdown-content {
     background-color: #ddd;
 }
 
+main {
+    text-align: center;
+    padding: 20px;
+}
+
 footer {
-    text-align: center; /* Footer'ı ortaladı */
+    text-align: center;
     padding: 10px 0;
     background-color: #f1f1f1;
 }
 
 .social-media {
     display: flex;
-    justify-content: center; /* Logoyu ortaladı */
+    justify-content: center;
     margin-top: 10px;
 }
 
 .social-icon img {
-    width: 24px; /* Instagram logosunun boyutunu küçülttü */
+    width: 24px;
     height: auto;
 }
 
@@ -113,29 +118,3 @@ footer {
     display: block;
     width: 80%;
     max-width: 700px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-}
-
-nav ul li:hover .dropdown-content {
-    display: block;
-}
