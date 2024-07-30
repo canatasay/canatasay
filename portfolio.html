@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolyo - Can ATASAY</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Portfolyo</h1>
         <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="contact.html">İletişim</a>
-            <a href="copyright.html">Telif Hakkı</a>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li class="dropdown">
+                    <a href="portfolio.html">Portfolyo</a>
+                    <div class="dropdown-content">
+                        <a href="#koleksiyon1">Koleksiyon 1</a>
+                        <a href="#koleksiyon2">Koleksiyon 2</a>
+                        <a href="#koleksiyon3">Koleksiyon 3</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="copyright.html">Telif Hakkı</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                    <!-- Diğer diller buraya eklenebilir -->
+                </select>
+            </div>
         </nav>
     </header>
     <main>
         <h2>Projelerim</h2>
         <section class="portfolio">
             <div class="portfolio-item">
-                <img src="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" alt="Kapak" class="portfolio-image">
+                <a href="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" class="portfolio-link">
+                    <img src="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" alt="Kapak" class="portfolio-image">
+                </a>
             </div>
         </section>
     </main>
@@ -31,10 +51,10 @@
             </a>
         </div>
     </footer>
-    <div id="imageModal" class="modal">
+
+    <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
+        <img class="lightbox-content" id="lightbox-image">
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
