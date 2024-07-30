@@ -20,4 +20,22 @@ document.addEventListener("DOMContentLoaded", function () {
             lightbox.style.display = 'none';
         }
     });
+
+    // Mobile menu fix
+    document.querySelectorAll('nav ul li').forEach(function (menuItem) {
+        menuItem.addEventListener('click', function (event) {
+            if (this.querySelector('.dropdown-content')) {
+                event.stopPropagation();
+                this.querySelector('.dropdown-content').classList.toggle('show');
+            }
+        });
+    });
+
+    document.addEventListener('click', function (event) {
+        document.querySelectorAll('.dropdown-content').forEach(function (dropdown) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
 });
