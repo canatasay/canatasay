@@ -1,9 +1,7 @@
-/* Genel font ayarları */
 body {
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Gloria Hallelujah', cursive; /* Fontu tüm sayfalarda geçerli kıldık */
 }
 
-/* Header stil ayarları */
 header {
     background-color: #3498db;
     color: white;
@@ -55,31 +53,23 @@ nav ul li:hover .dropdown-content {
     background-color: #ddd;
 }
 
-/* Portfolyo başlığı altındaki alt başlıkların görünümünü ayarlama */
-nav ul li .dropdown-content {
-    display: none;
+footer {
+    text-align: center; /* Footer'ı ortaladı */
+    padding: 10px 0;
+    background-color: #f1f1f1;
 }
 
-nav ul li:hover .dropdown-content {
-    display: block;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.social-media {
+    display: flex;
+    justify-content: center; /* Logoyu ortaladı */
+    margin-top: 10px;
 }
 
-/* Instagram logosunun boyutunu ayarlama */
-.social-media img {
-    width: 24px; /* İdeal boyut */
+.social-icon img {
+    width: 24px; /* Instagram logosunun boyutunu küçülttü */
     height: auto;
 }
 
-/* Genel içerik ayarları */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Portfolyo stili */
 .portfolio {
     display: flex;
     justify-content: center;
@@ -104,7 +94,6 @@ main {
     transform: scale(1.05);
 }
 
-/* Lightbox stili */
 .lightbox {
     display: none;
     position: fixed;
@@ -141,4 +130,12 @@ main {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
 }
