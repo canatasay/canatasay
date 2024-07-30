@@ -1,24 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const portfolioLinks = document.querySelectorAll('.portfolio-link');
-    const close = document.getElementsByClassName('close')[0];
-
-    portfolioLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
+document.addEventListener('DOMContentLoaded', function () {
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImage = document.getElementById('lightbox-image');
+    var closeButton = document.querySelector('.close');
+    
+    document.querySelectorAll('.portfolio-link').forEach(function (link) {
+        link.addEventListener('click', function (event) {
             event.preventDefault();
-            lightbox.style.display = "block";
+            lightbox.style.display = 'block';
             lightboxImage.src = this.href;
         });
     });
-
-    close.onclick = function() {
-        lightbox.style.display = "none";
-    }
-
-    lightbox.onclick = function(event) {
+    
+    closeButton.addEventListener('click', function () {
+        lightbox.style.display = 'none';
+    });
+    
+    lightbox.addEventListener('click', function (event) {
         if (event.target === lightbox) {
-            lightbox.style.display = "none";
+            lightbox.style.display = 'none';
         }
-    }
+    });
+    
+    document.getElementById('language-selector').addEventListener('change', function () {
+        var selectedLanguage = this.value;
+        // Burada dil değiştirme işlemi yapılabilir.
+        console.log('Seçilen dil:', selectedLanguage);
+    });
 });
