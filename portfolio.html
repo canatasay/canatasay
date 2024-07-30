@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolyo - Can ATASAY</title>
+    <title>Portfolyo</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
@@ -25,36 +25,37 @@
                 <li><a href="copyright.html">Telif Hakkı</a></li>
             </ul>
             <div class="language-selector">
-                <select id="language-select">
+                <select id="language-select" onchange="changeLanguage()">
                     <option value="tr">Türkçe</option>
                     <option value="en">English</option>
-                    <!-- Diğer diller buraya eklenebilir -->
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="fr">Français</option>
                 </select>
             </div>
         </nav>
     </header>
-    <main>
-        <h2>Projelerim</h2>
-        <section class="portfolio">
-            <div class="portfolio-item">
-                <a href="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" class="portfolio-link">
-                    <img src="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" alt="Kapak" class="portfolio-image">
-                </a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 Can ATASAY</p>
-        <div class="social-media">
-            <a href="https://www.instagram.com/noirxpair/" target="_blank" class="social-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+
+    <div class="container">
+        <div class="project-card">
+            <a href="main/images/kapak.jpg" class="portfolio-link">
+                <img src="main/images/kapak.jpg" alt="Proje Görseli">
             </a>
         </div>
-    </footer>
+    </div>
 
-    <div id="lightbox" class="lightbox">
+    <div id="lightbox">
         <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-image">
+        <img id="lightbox-image" src="">
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Can ATASAY</p>
+        <div class="social-icon">
+            <a href="https://www.instagram.com/yourprofile/">
+                <img src="path/to/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
     </div>
 </body>
 </html>
