@@ -11,13 +11,14 @@
 </head>
 <body>
     <header>
-        <h1>Can ATASAY</h1>
+        <h1>Portfolyo</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="portfolio.html">Portfolyo</a>
+                <li class="dropdown">
+                    <a href="portfolio.html">Portfolyo</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Deja vu</a></li>
+                        <li><a href="dejavu.html">Deja vu</a></li>
                         <li><a href="#">Climate Action</a></li>
                         <li><a href="#">Timeless Stitches</a></li>
                     </ul>
@@ -28,19 +29,15 @@
         </nav>
     </header>
     <main>
-        <h2>Portfolyo</h2>
-        <div class="portfolio">
+        <h2>Projelerim</h2>
+        <section class="portfolio">
             <div class="portfolio-item">
                 <a href="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" class="portfolio-link">
                     <img src="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" alt="Kapak" class="portfolio-image">
                 </a>
             </div>
-        </div>
+        </section>
     </main>
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
     <footer>
         <p>© 2024 Can ATASAY</p>
         <div class="social-media">
@@ -49,6 +46,10 @@
             </a>
         </div>
     </footer>
-    <script src="scripts.js" defer></script>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
