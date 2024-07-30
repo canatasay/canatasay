@@ -27,16 +27,62 @@ document.addEventListener("DOMContentLoaded", function() {
         const select = document.getElementById('language-select');
         const language = select.value;
 
-        if (language === "tr") {
-            window.location.href = "index.html"; // Türkçe ana sayfa URL'si
-        } else if (language === "en") {
-            window.location.href = "index_en.html"; // İngilizce ana sayfa URL'si
-        } else if (language === "es") {
-            window.location.href = "index_es.html"; // İspanyolca ana sayfa URL'si
-        } else if (language === "it") {
-            window.location.href = "index_it.html"; // İtalyanca ana sayfa URL'si
-        } else if (language === "fr") {
-            window.location.href = "index_fr.html"; // Fransızca ana sayfa URL'si
+        // Mevcut sayfa URL'sini alın
+        const currentUrl = window.location.href;
+        
+        // Ana sayfa URL'sini belirleyin
+        let newUrl;
+
+        if (currentUrl.includes("portfolio.html")) {
+            if (language === "tr") {
+                newUrl = "portfolio.html";
+            } else if (language === "en") {
+                newUrl = "portfolio_en.html";
+            } else if (language === "es") {
+                newUrl = "portfolio_es.html";
+            } else if (language === "it") {
+                newUrl = "portfolio_it.html";
+            } else if (language === "fr") {
+                newUrl = "portfolio_fr.html";
+            }
+        } else if (currentUrl.includes("contact.html")) {
+            if (language === "tr") {
+                newUrl = "contact.html";
+            } else if (language === "en") {
+                newUrl = "contact_en.html";
+            } else if (language === "es") {
+                newUrl = "contact_es.html";
+            } else if (language === "it") {
+                newUrl = "contact_it.html";
+            } else if (language === "fr") {
+                newUrl = "contact_fr.html";
+            }
+        } else if (currentUrl.includes("copyright.html")) {
+            if (language === "tr") {
+                newUrl = "copyright.html";
+            } else if (language === "en") {
+                newUrl = "copyright_en.html";
+            } else if (language === "es") {
+                newUrl = "copyright_es.html";
+            } else if (language === "it") {
+                newUrl = "copyright_it.html";
+            } else if (language === "fr") {
+                newUrl = "copyright_fr.html";
+            }
+        } else {
+            if (language === "tr") {
+                newUrl = "index.html";
+            } else if (language === "en") {
+                newUrl = "index_en.html";
+            } else if (language === "es") {
+                newUrl = "index_es.html";
+            } else if (language === "it") {
+                newUrl = "index_it.html";
+            } else if (language === "fr") {
+                newUrl = "index_fr.html";
+            }
         }
+
+        window.location.href = newUrl;
     }
 });
