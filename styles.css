@@ -152,7 +152,7 @@ nav ul li a:hover, nav ul li .dropdown-content a:hover {
     cursor: pointer;
 }
 
-close:hover,
+.close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
