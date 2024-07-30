@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var lightboxImage = document.getElementById('lightbox-image');
     var closeBtn = document.querySelector('.close');
 
-    document.querySelectorAll('.portfolio-image').forEach(function (image) {
-        image.addEventListener('click', function (event) {
+    document.querySelectorAll('.portfolio-link').forEach(function (link) {
+        link.addEventListener('click', function (event) {
             event.preventDefault();
-            lightboxImage.src = this.src;
+            lightboxImage.src = this.href;
             lightbox.style.display = 'block';
         });
     });
