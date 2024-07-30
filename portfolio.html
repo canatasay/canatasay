@@ -1,61 +1,57 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolyo</title>
+    <title>Portfolyo - Can ATASAY</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Portfolyo</h1>
+        <h1>Can ATASAY</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
-                <li class="dropdown">
-                    <a href="portfolio.html">Portfolyo</a>
-                    <div class="dropdown-content">
-                        <a href="#koleksiyon1">Koleksiyon 1</a>
-                        <a href="#koleksiyon2">Koleksiyon 2</a>
-                        <a href="#koleksiyon3">Koleksiyon 3</a>
-                    </div>
+                <li><a href="portfolio.html">Portfolyo</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Koleksiyon 1</a></li>
+                        <li><a href="#">Koleksiyon 2</a></li>
+                    </ul>
                 </li>
                 <li><a href="contact.html">İletişim</a></li>
                 <li><a href="copyright.html">Telif Hakkı</a></li>
+                <li>
+                    <select id="language-selector">
+                        <option value="tr">Türkçe</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="it">Italiano</option>
+                        <option value="fr">Français</option>
+                        <!-- Diğer diller buraya eklenecek -->
+                    </select>
+                </li>
             </ul>
-            <div class="language-selector">
-                <select id="language-select" onchange="changeLanguage()">
-                    <option value="tr">Türkçe</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
         </nav>
     </header>
-
-    <div class="container">
-        <div class="project-card">
-            <a href="main/images/kapak.jpg" class="portfolio-link">
-                <img src="main/images/kapak.jpg" alt="Proje Görseli">
-            </a>
-        </div>
-    </div>
-
-    <div id="lightbox">
-        <span class="close">&times;</span>
-        <img id="lightbox-image" src="">
-    </div>
-
-    <div class="footer">
+    <main>
+        <h2>Portfolyo</h2>
+        <section class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" alt="Kapak" class="portfolio-image">
+            </div>
+        </section>
+    </main>
+    <footer>
         <p>© 2024 Can ATASAY</p>
-        <div class="social-icon">
-            <a href="https://www.instagram.com/yourprofile/">
-                <img src="path/to/instagram-icon.png" alt="Instagram">
+        <div class="social-media">
+            <a href="https://www.instagram.com/noirxpair/" target="_blank" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
             </a>
         </div>
-    </div>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
