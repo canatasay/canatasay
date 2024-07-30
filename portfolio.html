@@ -3,51 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolyo - Can ATASAY</title>
+    <title>Can ATASAY - Portfolyo</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/panzoom/dist/panzoom.css">
 </head>
 <body>
     <header>
-        <h1>Can ATASAY</h1>
+        <h1>Portfolyo</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="portfolio.html">Portfolyo</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Koleksiyon 1</a></li>
-                        <li><a href="#">Koleksiyon 2</a></li>
-                    </ul>
-                </li>
+                <li><a href="portfolio.html">Portfolyo</a></li>
                 <li><a href="contact.html">İletişim</a></li>
-                <li><a href="copyright.html">Telif Hakkı</a></li>
+                <li><a href="telifhakki.html">Telif Hakkı</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Portfolyo</h2>
         <div class="portfolio">
             <div class="portfolio-item">
-                <a href="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" class="portfolio-link">
-                    <img src="https://raw.githubusercontent.com/canatasay/canatasay/main/images/kapak.jpg" alt="Kapak" class="portfolio-image">
-                </a>
+                <img src="kapak.jpg" alt="Kapak Görseli" class="portfolio-image">
             </div>
         </div>
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-image">
+        </div>
     </main>
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
     <footer>
         <p>© 2024 Can ATASAY</p>
         <div class="social-media">
-            <a href="https://www.instagram.com/noirxpair/" target="_blank" class="social-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
+            <a href="https://www.instagram.com/noirxpair/" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
         </div>
     </footer>
-    <script src="scripts.js" defer></script>
+    <script src="https://unpkg.com/panzoom/dist/panzoom.min.js"></script>
+    <script>
+        // Lightbox açıldığında Panzoom'u başlat
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var lightboxImage = document.querySelector('.lightbox-content');
+            var lightbox = document.querySelector('.lightbox');
+            var closeBtn = document.querySelector('.close');
+
+            // Panzoom'u başlat
+            var panzoom = Panzoom(lightboxImage, {
+                maxScale: 5
+            });
+
+            // Görsele tıklayınca lightbox açılması
+            document.querySelectorAll('.portfolio-image').forEach(img => {
+                img.addEventListener('click', (e) => {
+                    lightbox.style.display = 'block';
+                    lightboxImage.src = e.target.src;
+                    panzoom.reset();
+                });
+            });
+
+            // Close button
+            closeBtn.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+
+            // Lightbox dışında tıklanınca kapanması
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
