@@ -16,6 +16,7 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -40,6 +41,8 @@ nav ul li:focus-within .dropdown-content {
     background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    left: 0; /* Alt menülerin ana menünün altında hizalanması için */
+    top: 100%; /* Alt menülerin ana menünün altına hizalanması için */
 }
 
 .dropdown-content a {
@@ -138,14 +141,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .dropdown-content a {
-        display: block;
-    }
     nav ul {
-        display: block;
+        flex-direction: column;
     }
+
     nav ul li {
-        display: block;
         margin: 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .dropdown-content {
+        position: static; /* Mobilde alt menüler, ana menünün altında hizalanacak */
+        box-shadow: none; /* Gölgeyi kaldır */
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+        border-top: 1px solid #ddd; /* Alt menüler arasında çizgi */
     }
 }
