@@ -28,8 +28,12 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target !== e.currentTarget) return;
         lightbox.classList.remove("active");
     });
-});
 
+    // Dropdown functionality for mobile
+    var dropdown = document.querySelectorAll(".dropdown");
+    dropdown.forEach(menu => {
+        menu.addEventListener("click", e => {
+            menu.querySelector(".dropdown-content").classList.toggle("show");
         });
     });
 });
