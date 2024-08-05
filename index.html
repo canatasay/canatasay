@@ -11,6 +11,38 @@
             display: block;
             margin: 20px auto; 
         }
+        
+        /* Video kaplama (overlay) stili */
+        #video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        video {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        /* Kapatma butonu stili */
+        #close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +71,15 @@
     <main>
         <h2>Hoş Geldiniz!</h2>
         <img src="images/hayatım.jpg" alt="Hoş Geldiniz Görseli" width="800" height="800" />
-        <p></p>
+        
+        <!-- Video Overlay -->
+        <div id="video-overlay">
+            <video id="welcome-video" autoplay>
+                <source src="https://github.com/canatasay/canatasay/raw/main/videos/hayat%C4%B1mm.mp4" type="video/mp4">
+                Tarayıcınız bu videoyu desteklemiyor.
+            </video>
+            <button id="close-button">Kapat</button>
+        </div>
     </main>
     <footer>
         <p>© 2024 Can ATASAY</p>
@@ -49,5 +89,11 @@
             </a>
         </div>
     </footer>
+    <script>
+        // Kapatma butonuna tıklanınca video kaplamasını gizle
+        document.getElementById('close-button').addEventListener('click', function() {
+            document.getElementById('video-overlay').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
