@@ -3,63 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can ATASAY Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title>Ana Sayfa - Can ATASAY</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <h1>Ana Sayfa</h1>
         <nav>
             <ul>
-                <li>
-                    <a href="#">Ana Sayfa</a>
-                </li>
-                <li>
-                    <a href="#">Portfolyo</a>
-                    <ul class="submenu">
-                        <li><a href="#dejavu">Deja vu</a></li>
-                        <li><a href="#climate-action">Climate Action</a></li>
-                        <li><a href="#timeless-stitches">Timeless Stitches</a></li>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li class="dropdown">
+                    <a href="portfolio.html">Portfolyo</a>
+                    <ul class="dropdown-content">
+                        <li><a href="dejavu.html">Deja vu</a></li>
+                        <li><a href="climateaction.html">Climate Action</a></li>
+                        <li><a href="timelessstitches.html">Timeless Stitches</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Hakkında</a></li>
-                <li><a href="#">İletişim</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="copyright.html">Telif Hakkı</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="welcome">
-            <h1>Hoş Geldiniz!</h1>
-            <h2>Stilinizin Sanatla Buluştuğu Nokta!</h2>
-        </section>
-        <section id="portfolio">
-            <h1>Portfolyo</h1>
-            <div id="dejavu">
-                <h2>Deja vu</h2>
-                <div class="portfolio-images">
-                    <!-- Deja vu görselleri buraya -->
-                </div>
-            </div>
-            <div id="climate-action">
-                <h2>Climate Action</h2>
-                <div class="portfolio-images">
-                    <!-- Climate Action görselleri buraya -->
-                </div>
-            </div>
-            <div id="timeless-stitches">
-                <h2>Timeless Stitches</h2>
-                <div class="portfolio-images">
-                    <!-- Timeless Stitches görselleri buraya -->
-                </div>
-            </div>
-        </section>
+        <h2>Hoş Geldiniz!</h2>
+        <p>Stilinizin Sanatla Buluştuğu Nokta!</p>
     </main>
     <footer>
         <p>© 2024 Can ATASAY</p>
-        <a href="https://www.instagram.com/noirxpair" target="_blank">
-            <img src="instagram-logo.png" alt="Instagram" class="social-icon">
-        </a>
+        <div class="social-media">
+            <a href="https://www.instagram.com/noirxpair/" target="_blank" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
