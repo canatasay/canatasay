@@ -11,7 +11,7 @@
             display: block;
             margin: 20px auto; 
         }
-        
+
         /* Video kaplama (overlay) stili */
         #video-overlay {
             position: fixed;
@@ -27,8 +27,10 @@
         }
 
         video {
-            max-width: 80%;
-            max-height: 80%;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
         }
 
         /* Kapatma butonu stili */
@@ -42,6 +44,45 @@
             padding: 10px 15px;
             cursor: pointer;
             font-size: 16px;
+        }
+
+        /* Responsive header */
+        header {
+            padding: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .social-media {
+            margin-top: 10px;
         }
     </style>
     <link rel="stylesheet" href="styles.css">
@@ -74,8 +115,8 @@
         
         <!-- Video Overlay -->
         <div id="video-overlay">
-            <video id="welcome-video" autoplay>
-                <source src="https://github.com/canatasay/canatasay/raw/main/videos/hayatımm.mp4" type="video/mp4">
+            <video id="welcome-video" autoplay muted playsinline>
+                <source src="https://github.com/canatasay/canatasay/raw/main/videos/hayat%C4%B1mm.mp4" type="video/mp4">
                 Tarayıcınız bu videoyu desteklemiyor.
             </video>
             <button id="close-button">Kapat</button>
@@ -93,6 +134,14 @@
         // Kapatma butonuna tıklanınca video kaplamasını gizle
         document.getElementById('close-button').addEventListener('click', function() {
             document.getElementById('video-overlay').style.display = 'none';
+        });
+
+        // Sayfa yüklendiğinde videoyu otomatik başlat
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('welcome-video');
+            if (video) {
+                video.play();
+            }
         });
     </script>
 </body>
