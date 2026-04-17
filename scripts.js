@@ -42,3 +42,23 @@ window.addEventListener('resize', function() {
         });
     }
 });
+document.querySelectorAll('.dropdown > a').forEach(item => {
+  item.addEventListener('click', function (e) {
+
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+
+      parent.classList.toggle('active');
+    }
+  });
+});
+
+document.addEventListener('click', function(e) {
+  document.querySelectorAll('.dropdown').forEach(drop => {
+    if (!drop.contains(e.target)) {
+      drop.classList.remove('active');
+    }
+  });
+});
