@@ -159,3 +159,34 @@ footer {
         padding: 10px;
     }
 }
+/* Dropdown normalde gizli */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+}
+
+/* Desktop için hover çalışsın */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* MOBİL AYAR */
+@media (max-width: 768px) {
+
+  /* Hover'ı iptal ediyoruz */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  /* Tıklayınca açılacak */
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  /* Menü aşağı doğru düzgün açılsın */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+}
